@@ -1,0 +1,35 @@
+<section class="py-10">
+
+  <app-title-page>
+    <div class="small-title">Special Food</div>
+    <div class="title">Today's Special</div>
+    <div class="desc-title">
+      Special menu often comes different every day <br />
+      This is our special food today
+    </div>
+  </app-title-page>
+
+  <div class="flex flex-wrap justify-center gap-5 mt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    @for (item of itemSushi(); track $index) {
+      @for (suchi of item.meals.slice(0, 3); track $index) {
+        <div
+          class="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:scale-105 duration-300"
+          (click)="sendIdInUrl(suchi.idMeal)">
+          <figure>
+            <img class="rounded-t-lg w-full object-cover h-48" [src]="suchi.strMealThumb" [alt]="suchi.strMeal" />
+            <figcaption class="p-5">
+              <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white italic text-center">
+                {{ suchi.strMeal | slice:" ":0:3:" " }}
+              </h5>
+            </figcaption>
+          </figure>
+        </div>
+      }
+    }
+  </div>
+
+  <div class="mt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <img src="/Screenshot 2025-07-17 074517.png" class="w-full rounded-lg object-cover" alt="Special Image">
+  </div>
+
+</section>

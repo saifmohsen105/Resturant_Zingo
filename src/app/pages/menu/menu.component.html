@@ -1,0 +1,32 @@
+<div class="flex justify-center mt-20">
+  <select
+    class="bg-gray-900 text-white border border-yellow-500 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-[50%] p-2.5"
+    (change)="onCategoryChange($event)">
+
+    <option selected disabled>Select Category</option>
+
+    @for (item of navbarCategories; track $index) {
+    @for (nameCategore of item.categories; track $index) {
+    <option [value]="nameCategore.strCategory">
+      {{ nameCategore.strCategory }}
+    </option>
+    }
+    }
+  </select>
+</div>
+
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 px-6 py-10">
+  @for (item of menuCategore; track $index) {
+  @for (menu of item.meals; track $index) {
+  <div class="flex flex-col items-center cursor-pointer text-center group transition duration-300 hover:scale-105"
+    (click)="sendIdInUrl(menu.idMeal)">
+    <img class="w-32 h-32 object-cover rounded-full border-4 border-yellow-500 shadow-md" [src]="menu.strMealThumb"
+      [alt]="menu.strMeal">
+    <h3 class="mt-3 text-white text-sm font-semibold group-hover:text-yellow-400 transition duration-300">
+      {{menu.strMeal|slice:" ":0:3:" "}}
+    </h3>
+  </div>
+  }
+  }
+</div>

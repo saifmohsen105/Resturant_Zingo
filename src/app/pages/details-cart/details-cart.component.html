@@ -1,0 +1,37 @@
+@for (sushi of detailsSushi.meals ; track $index) {
+<div class="max-w-6xl mx-auto py-20">
+
+  <!-- Title -->
+  <h1 class="text-4xl font-bold text-yellow-400 mb-6">{{sushi.strMeal|slice:" ":0:4:" "}}</h1>
+
+  <!-- Grid -->
+  <div class="grid md:grid-cols-2 gap-10">
+
+    <!-- Image -->
+    <div>
+      <img [src]="sushi.strMealThumb" [alt]="sushi.strMeal" class="rounded-lg shadow-lg w-[70%]">
+      <p class="text-sm text-gray-400 mt-4">Category: <span class="text-white">{{sushi.strCategory}}</span> | Area:
+        <span class="text-white">{{sushi.strArea}}</span>
+      </p>
+    </div>
+    <!-- Info -->
+    <div>
+      <h2 class="text-xl text-yellow-400 font-semibold mb-2">Instructions</h2>
+      <p class="text-gray-300 leading-relaxed text-sm">
+        {{sushi.strInstructions}}
+      </p>
+      <h2 class="text-xl text-yellow-400 font-semibold mb-2">Ingredients</h2>
+      <select
+        class="bg-gray-900 text-white border border-yellow-500 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-[50%] p-2.5">
+        @for (ingredient of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]; track $index) {
+        @if(sushi[`strIngredient${$index}`]){
+        <option class="text-yellow-300">{{sushi[`strIngredient${$index}`]}}</option>
+        }
+        }
+      </select>
+
+
+    </div>
+  </div>
+</div>
+}

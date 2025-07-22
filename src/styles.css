@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+/* You can add global styles to this file, and also import other style files */
+@plugin "flowbite/plugin";
+.title{
+  @apply text-amber-300 text-4xl italic
+}
+.desc-title{
+  @apply pt-2 text-gray-500 font-[Caveat]
+}

@@ -1,0 +1,35 @@
+<section class="py-10">
+  <app-title-page>
+    <div class="small-title">Quality food for you</div>
+    <div class="title">Our Specialities</div>
+    <div class="desc-title">
+      Authentic food from our restaurant served <br>
+      with high quality ingredients
+    </div>
+  </app-title-page>
+
+  <div class="cards flex flex-wrap justify-center  gap-6 mt-10 w-[90%] mx-auto">
+    @for (item of sushies(); track $index) {
+      @for (sushi of item.meals.slice(3,9); track $index) {
+        <div class="w-full sm:w-[45%] md:w-[30%] lg:w-[22%] bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 cursor-pointer hover:scale-105 duration-300"
+             (click)="sendIdInUrl(sushi.idMeal)">
+          <div class="card-hover bg-gray-800 text-center italic rounded-2xl overflow-hidden shadow-xl border border-gray-800">
+            <div class="relative overflow-hidden">
+              <img class="w-full object-cover transition-transform duration-300 hover:scale-110"
+                   [src]="sushi.strMealThumb" [alt]="sushi.strMeal" />
+              <div class="absolute top-4 right-4 bg-yellow-500 text-black px-3 py-1 rounded-lg text-sm font-semibold">
+                Special
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-playfair text-2xl font-bold text-white mb-3">
+                {{sushi.strMeal | slice:" ":0:2:" "}}
+              </h3>
+              <p class="text-gray-400 text-sm mb-4">{{sushi.strArea}}</p>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</section>
