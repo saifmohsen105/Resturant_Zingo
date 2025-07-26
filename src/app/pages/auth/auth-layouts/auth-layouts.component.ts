@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-// import { RouterOutlet } from "../../../../../node_modules/@angular/router/router_module.d-Bx9ArA6K";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-auth-layouts',
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './auth-layouts.component.html',
   styleUrl: './auth-layouts.component.css'
 })

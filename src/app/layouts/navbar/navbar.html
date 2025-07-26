@@ -16,7 +16,7 @@
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul
         class="font-medium flex flex-col text-white p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0  ">
-        @for (link of ['home' , 'cart' , 'menu' , 'about']; track $index) {
+        @for (link of ['home' ,  'menu' , 'about']; track $index) {
         <li>
           <a [routerLink]=link routerLinkActive="active" class="block py-2 px-3 md:p-0 capitalize"
             aria-current="page">{{link}}</a>

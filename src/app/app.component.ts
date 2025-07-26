@@ -2,12 +2,12 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from "./layouts/footer/footer";
-import { Navbar } from "./layouts/navbar/navbar";
 import { Loading } from "./shared/components/loading/loading/loading";
+import { Navbar } from "./layouts/navbar/navbar";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, Loading],
+  imports: [RouterOutlet, Footer, Loading, Navbar],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

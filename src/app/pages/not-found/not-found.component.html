@@ -1,1 +1,61 @@
-<p>not-found works!</p>
+<div
+  class="min-h-screen bg-gradient-to-br from-zingo-orange via-zingo-yellow to-zingo-red flex items-center justify-center p-4 relative overflow-hidden">
+
+
+
+  <!-- Main 404 Container -->
+  <div class="w-full max-w-4xl relative text-center">
+
+
+
+    <!-- 404 Number with Food Theme -->
+    <div class="mb-8 relative">
+      <div class="text-9xl md:text-[12rem] font-black text-white/30 leading-none relative">
+        4 0 4
+      </div>
+
+
+      <!-- Error Message -->
+      <div class="mb-8">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 tracking-wide">
+          Oops! We're <span class="text-yellow-300">Hungry</span> for This Page!
+        </h1>
+        <p class="text-white/80 text-lg md:text-xl font-medium mb-2">
+          Looks like this dish isn't on our menu anymore
+        </p>
+        <p class="text-white/60 text-base md:text-lg">
+          The page you're looking for might have been moved, deleted, or is temporarily unavailable.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+        <a routerLink="/home">
+          <button
+            class="bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold py-4 px-8 rounded-2xl hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2 min-w-[200px] justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+              </path>
+            </svg>
+            Back to Home
+          </button>
+        </a>
+
+        <a routerLink="/menu">
+          <button
+            class="bg-white/20 hover:bg-white/30 border border-white/30 text-white font-bold py-4 px-8 rounded-2xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm flex items-center gap-2 min-w-[200px] justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+              </path>
+            </svg>
+            View Menu
+          </button>
+        </a>
+      </div>
+
+
+    </div>
+
+  </div>
